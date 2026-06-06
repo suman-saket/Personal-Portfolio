@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-orange-100 text-black font-serif antialiased dark:bg-neutral-950 dark:text-orange-50;
+  }
+}
