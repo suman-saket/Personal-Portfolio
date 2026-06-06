@@ -19,7 +19,7 @@ function Home() {
 
         <div className="flex flex-wrap gap-5">
           <a
-            href="https://twitter.com"
+            href="https://x.com/Saa_Suuu"
             target="_blank"
             rel="noopener noreferrer"
             className={underlineLinkClass}
@@ -27,7 +27,7 @@ function Home() {
             Twitter
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/suman-saket"
             target="_blank"
             rel="noopener noreferrer"
             className={underlineLinkClass}
