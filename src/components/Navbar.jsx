@@ -31,11 +31,11 @@ function Navbar() {
 
   return (
     <nav className={`pt-6 ${appShell}`}>
-      <div className={containerClass}>
-        <Link to="/" className="font-serif text-4xl text-black dark:text-orange-50">
-          Saket's Blog
+      <div className={`${containerClass} flex flex-wrap items-center justify-between gap-x-6 gap-y-3`}>
+        <Link to="/" className="font-serif text-4xl text-ink shrink-0">
+          Saket Suman
         </Link>
-        <ul className="mt-5 flex flex-wrap items-center gap-5 list-none p-0 m-0">
+        <ul className="flex flex-wrap items-center gap-5 list-none p-0 m-0">
           {navLinks.map(({ to, label }) => (
             <li key={to}>
               <Link to={to} className={navLinkClass(isActive(to))}>

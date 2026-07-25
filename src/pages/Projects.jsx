@@ -4,6 +4,14 @@ import { pageContainer } from '../utils/styles';
 function Projects() {
   const projects = [
     {
+      title: 'User Activity Tracker',
+      description:
+        'An event-driven user activity tracking system built to learn Kafka. HTTP ingest returns 202 immediately; Kafka fans out to page-view, click, and session consumers with MongoDB persistence.',
+      technologies: ['NestJS', 'Kafka', 'MongoDB', 'Docker'],
+      link: '/blogs/event-driven-systems-part-1-why-and-architecture',
+      github: 'https://github.com/suman-saket/user-activity-tracker',
+    },
+    {
       title: 'E-Commerce Platform',
       description:
         'A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard.',

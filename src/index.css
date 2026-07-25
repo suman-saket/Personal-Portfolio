@@ -3,8 +3,24 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+  Site theme — change these to adjust background, text, and accents globally.
+  Light: surface + ink | Dark: overrides on .dark
+*/
+@theme {
+  --color-surface:#fdf2f8;
+  --color-ink: #1c1917;
+  --color-ink-muted:  #9d7489;
+}
+
 @layer base {
   body {
-    @apply bg-orange-100 text-black font-serif antialiased dark:bg-neutral-950 dark:text-orange-50;
+    @apply bg-surface text-ink font-serif antialiased transition-colors duration-300;
+  }
+
+  .dark {
+    --color-surface: #0c0a09;
+    --color-ink: #fafaf9;
+    --color-ink-muted: #a8a29e;
   }
 }
