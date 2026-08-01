@@ -6,22 +6,20 @@ export const meta = [
 
 export const skillGroups = [
   {
-    category: 'Systems & scale',
-    skills:
-      'Event-driven architecture, message queues (Kafka), async ingest, MongoDB, Docker, caching,Rate limiting',
+    category: 'Languages & Frameworks',
+    skills: 'JavaScript, TypeScript, Python, Express.js, NestJs, FastAPI, React, Next.js',
   },
-  // {
-  //   category: 'Real-time & async',
-  //   skills: 'Kafka producers/consumers, background processing, concurrent API design',
-  // },
-  
+  {
+    category: 'Databases',
+    skills: 'MongoDB, PostgreSQL',
+  },
+  {
+    category: 'Backend - Systems & scale',
+    skills:
+      'Event-driven architecture, message queues (Kafka), Docker, Caching,Rate limiting,REST API design,Grpc',
+  },
   {
     category: 'AI & ML engineering',
     skills: 'LLM APIs, RAG basics (learning/building), integrating AI into backend services',
-  },
-  {
-    category: 'Backend & APIs',
-    skills:
-      'REST API design, NestJS, Node.js/Express, auth (JWT, sessions), RBAC, validation & DTOs',
   },
 ];

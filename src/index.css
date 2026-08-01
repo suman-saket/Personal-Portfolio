@@ -4,13 +4,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
-  Site theme — change these to adjust background, text, and accents globally.
-  Light: surface + ink | Dark: overrides on .dark
+  Site theme — Kraft parchment (warm brown paper). Dark: warm brown-black on .dark
 */
 @theme {
-  --color-surface:#fdf2f8;
-  --color-ink: #1c1917;
-  --color-ink-muted:  #9d7489;
+  --color-surface: #e8dfd0;
+  --color-surface-raised: #f2ebe0;
+  --color-ink: #2c2416;
+  --color-ink-muted: #73685a;
 }
 
 @layer base {
@@ -19,8 +19,29 @@
   }
 
   .dark {
-    --color-surface: #0c0a09;
-    --color-ink: #fafaf9;
-    --color-ink-muted: #a8a29e;
+    --color-surface: #1a1612;
+    --color-surface-raised: #252019;
+    --color-ink: #e8dfd0;
+    --color-ink-muted: #a89882;
+  }
+
+  /* Blog prose — inherit warm ink instead of default cool gray */
+  .prose {
+    --tw-prose-body: var(--color-ink);
+    --tw-prose-headings: var(--color-ink);
+    --tw-prose-lead: var(--color-ink-muted);
+    --tw-prose-links: var(--color-ink);
+    --tw-prose-bold: var(--color-ink);
+    --tw-prose-counters: var(--color-ink-muted);
+    --tw-prose-bullets: var(--color-ink-muted);
+    --tw-prose-hr: color-mix(in srgb, var(--color-ink) 22%, transparent);
+    --tw-prose-quotes: var(--color-ink);
+    --tw-prose-quote-borders: color-mix(in srgb, var(--color-ink) 28%, transparent);
+    --tw-prose-captions: var(--color-ink-muted);
+    --tw-prose-code: var(--color-ink);
+    --tw-prose-pre-code: var(--color-ink);
+    --tw-prose-pre-bg: var(--color-surface-raised);
+    --tw-prose-th-borders: color-mix(in srgb, var(--color-ink) 28%, transparent);
+    --tw-prose-td-borders: color-mix(in srgb, var(--color-ink) 18%, transparent);
   }
 }

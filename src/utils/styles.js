@@ -31,10 +31,10 @@ export const underlineLinkClass =
   "relative font-semibold after:content-[''] after:pointer-events-none after:absolute after:w-0 after:h-[2px] after:bg-ink after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300";
 
 export const inputClassName =
-  'w-full px-3 py-2.5 border border-ink/25 bg-white/50 dark:bg-stone-900/60 font-serif text-base text-ink focus:outline-none focus:border-ink focus:bg-white/70 dark:focus:bg-stone-900/80';
+  'w-full px-3 py-2.5 border border-ink/30 bg-surface-raised font-serif text-base text-ink focus:outline-none focus:border-ink/60 focus:bg-surface-raised';
 
 export const submitButtonClassName =
   'px-6 py-2.5 border-2 border-ink font-semibold bg-transparent hover:bg-ink hover:text-surface transition-colors';
 
 export const proseContentClassName =
-  'mt-4 font-serif text-lg prose prose-stone dark:prose-invert max-w-none prose-p:mt-2 prose-headings:font-serif prose-headings:font-normal';
+  'mt-4 font-serif text-lg prose dark:prose-invert max-w-none prose-p:mt-2 prose-headings:font-serif prose-headings:font-normal';
