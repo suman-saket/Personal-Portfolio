@@ -1,8 +1,7 @@
 import { microservices } from './microservices';
-import { abc } from './abc';
 // Every topic article. To add one: create src/data/<topic>.js in the same
 // shape as microservices.js, import it here, and append it to this array.
-export const seriesList = [microservices, abc];
+export const seriesList = [microservices];
 
 /** The topic whose slug is in the URL, or null. */
 export function getSeries(slug) {
