@@ -1,9 +1,9 @@
-import { getAllBlogs } from '../data/blogs';
+import { getSeriesListings } from '../data/series';
 import BlogCard from '../components/BlogCard';
 import { mutedText, pageContainer } from '../utils/styles';
 
 function Blogs() {
-  const blogs = getAllBlogs();
+  const blogs = getSeriesListings();
 
   return (
     <div className={`my-8 ${pageContainer.wide}`}>

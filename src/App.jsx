@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 //import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
-import BlogPost from './pages/BlogPost';
+import SeriesChapter from './pages/SeriesChapter';
 import Contact from './pages/Contact';
 import { appShell } from './utils/styles';
 import About from './pages/About';
@@ -17,7 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/projects" element={<Projects />} /> */}
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/:slug" element={<BlogPost />} />
+          <Route path="/blogs/:seriesSlug" element={<SeriesChapter />} />
+          <Route path="/blogs/:seriesSlug/:chapterSlug" element={<SeriesChapter />} />
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/about" element={<About />} /> */}
         </Routes>

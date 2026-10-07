@@ -1,6 +1,6 @@
 export const meta = [
   { label: 'Location', value: 'Bengaluru, India' },
-  { label: 'Experience', value: '4+ years' },
+  { label: 'Experience', value: '4.5+ years' },
   { label: 'Role', value: 'Backend, Gen AI, A bit of Frontend' },
 ];
 

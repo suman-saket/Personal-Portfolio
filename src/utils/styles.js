@@ -1,8 +1,18 @@
 export const pageContainer = {
   home: 'w-full max-w-[90%] md:w-[43%] mx-auto',
+  homeBoard: 'w-full max-w-[95%] xl:max-w-[1100px] mx-auto px-1',
   wide: 'w-full max-w-[95%] md:w-[55%] mx-auto',
   medium: 'w-full max-w-[90%] md:w-[50%] mx-auto',
+  series: 'w-full max-w-[95%] xl:max-w-[1200px] mx-auto px-1',
 };
+
+/** Navbar and footer width for the current route. */
+export function shellContainer(pathname) {
+  if (pathname.startsWith('/blogs/')) return pageContainer.series;
+  if (pathname.startsWith('/blogs')) return pageContainer.wide;
+  if (pathname === '/') return pageContainer.homeBoard;
+  return pageContainer.home;
+}
 
 /** Page background + default text (keep in sync with src/index.css @theme) */
 export const appShell =

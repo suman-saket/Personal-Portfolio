@@ -1,11 +1,13 @@
-import { underlineLinkClass, appShell, divider, mutedText, pageContainer } from '../utils/styles';
+import { useLocation } from 'react-router-dom';
+import { underlineLinkClass, appShell, divider, mutedText, shellContainer } from '../utils/styles';
 
 function Footer() {
+  const { pathname } = useLocation();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className={`py-8 border-t ${divider} ${appShell}`}>
-      <div className={`${pageContainer.home} flex flex-wrap justify-between items-center gap-4`}>
+      <div className={`${shellContainer(pathname)} flex flex-wrap justify-between items-center gap-4`}>
         <p className={`text-sm ${mutedText}`}>&copy; {currentYear} Portfolio. All rights reserved.</p>
         <div className="flex flex-wrap gap-5">
           <a

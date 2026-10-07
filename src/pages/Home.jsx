@@ -1,90 +1,67 @@
 import { meta, skillGroups } from '../data/home';
 import {
-  divider,
   homeLeadClass,
   metaLabelClass,
   mutedText,
   pageContainer,
   sectionHeadingClass,
+  subtleBorder,
   underlineLinkClass,
 } from '../utils/styles';
 
+const socials = [
+  { href: 'https://x.com/Saa_Suuu', label: 'Twitter' },
+  { href: 'https://github.com/suman-saket', label: 'Github' },
+  { href: 'https://www.linkedin.com/in/saket-suman-2740801b1', label: 'LinkedIn' },
+];
+
 function Home() {
   return (
-    <div className={`mt-8 pb-16 ${pageContainer.home}`}>
-      <section className="space-y-10">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className={`min-w-0 flex-1 space-y-4 ${homeLeadClass}`}>
-            {/* <p>
-              Hi, myself, <span className="font-semibold">Saket Suman</span>
-            </p> */}
-            <p>
-              An Engineer who started a bit late but now confident enough to learn and handle things on  fly.
-            </p>
-            {/* <p>
-              Majority of the time either I am learning from documentation or building some cool stuffs :)
-            </p> */}
-          </div>
+    <div className={`mt-8 pb-10 ${pageContainer.homeBoard}`}>
+      <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
+        <div>
+          <p className={homeLeadClass}>
+          I am a software engineer passionate about BackEnd and applied AI and databases. Currently, I am a Software Engineer at Bighaat, working at the Core BackEnd Team building scalable BackEnd Services that powers million of customer requests across our App and Web Users.
 
-          <div className="space-y-2 md:shrink-0 md:text-right">
+I have 4.5+ years Professional Software Engineering Engineering Experience wokring in fast-moving, lean engineering team where i took ownership to of problems/feature from design to production.
+          </p>
+
+          <dl className="mt-8 space-y-2">
             {meta.map(({ label, value }) => (
-              <div
-                key={label}
-                className="flex flex-wrap items-baseline gap-x-2 md:justify-end"
-              >
-                <span className={metaLabelClass}>{label}:</span>
-                <span className="text-base">{value}</span>
+              <div key={label} className="flex flex-wrap items-baseline gap-x-2">
+                <dt className={metaLabelClass}>{label}:</dt>
+                <dd className="text-base">{value}</dd>
               </div>
+            ))}
+          </dl>
+
+          <div className="mt-8 flex flex-wrap gap-5">
+            {socials.map(({ href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={underlineLinkClass}
+              >
+                {label}
+              </a>
             ))}
           </div>
         </div>
 
-        <hr className={divider} />
-
-        <div>
+        <div className={`lg:border-l lg:pl-16 ${subtleBorder}`}>
           <h2 className={sectionHeadingClass}>Things I can work</h2>
-          <ul className="mt-5 list-none space-y-5 p-0 m-0">
+          <ul className="mt-5 list-none space-y-4 p-0 m-0">
             {skillGroups.map(({ category, skills }) => (
-              <li key={category} className="border-l-2 border-ink/15 pl-4 dark:border-ink/25">
+              <li key={category}>
                 <p className="font-semibold text-base">{category}</p>
                 <p className={`mt-1 text-base leading-relaxed ${mutedText}`}>{skills}</p>
               </li>
             ))}
           </ul>
         </div>
-
-        <hr className={divider} />
-
-        <div>
-          <p className={`${homeLeadClass} mb-4`}>Here are my socials, if you are searching :)</p>
-          <div className="flex flex-wrap gap-5">
-            <a
-              href="https://x.com/Saa_Suuu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={underlineLinkClass}
-            >
-              Twitter
-            </a>
-            <a
-              href="https://github.com/suman-saket"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={underlineLinkClass}
-            >
-              Github
-            </a>
-            <a
-              href="https://www.linkedin.com/in/saket-suman-2740801b1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={underlineLinkClass}
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import { appShell, divider, navLinkClass, pageContainer } from '../utils/styles';
+import { appShell, divider, navLinkClass, shellContainer } from '../utils/styles';
 
 function Navbar() {
   const location = useLocation();
-  const isBlogPost =
-    location.pathname.startsWith('/blogs/') && location.pathname !== '/blogs';
-  const isBlogSection = location.pathname.startsWith('/blogs');
-
-  const containerClass = isBlogPost
-    ? pageContainer.medium
-    : isBlogSection
-      ? pageContainer.wide
-      : pageContainer.home;
+  const containerClass = shellContainer(location.pathname);
 
   const isActive = (path) => {
     if (path === '/') {
